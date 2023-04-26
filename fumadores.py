@@ -9,7 +9,9 @@ fumadores=["1","2","3"]
 def agente():
     while True:
         ingredientesDisponibles=ingredientes.copy()
-        ingrediente1=random.choice(ingredientesDisponibles)
-        ingrediente2=random.choice(ingredientesDisponibles)
+        ingrediente1=ingredientesDisponibles.pop(ingredientesDisponibles.index(random.choice(ingredientes)))
+        ingrediente2=ingredientesDisponibles.pop(ingredientesDisponibles.index(random.choice(ingredientesDisponibles)))
+        
         print(f"El agente deja en la mesa {ingrediente1} y {ingrediente2}")
         time.sleep(1)
+
