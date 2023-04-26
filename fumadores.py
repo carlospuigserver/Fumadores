@@ -30,3 +30,9 @@ def fumador(nombre, ingrediente1, ingrediente2):
             print(f"El Fumador {nombre} esta esperando a que el agente defe {ingrediente1} y {ingrediente2} en la mesa")
             time.sleep(1)
 
+hiloAgente=threading.Thread(target=agente)
+hiloFumador1=threading.Thread(target=fumador, args=("1","papel","tabaco"))
+hiloFumador2=threading.Thread(target=fumador, args=("2","papel","cerillas"))
+hiloFumador3=threading.Thread(target=fumador, args=("3","tabaco","cerillas"))
+hiloFumador4=threading.Thread(target=fumador, args=("4","green","filtros"))
+hiloFumador5=threading.Thread(target=fumador, args=("5","green","cerillas"))
